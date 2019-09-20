@@ -26,7 +26,7 @@ class DatabaseSQLiteSchemaGrammarTest extends TestCase
         $this->assertEquals(
             [
                 'alter table "users" add column "foo" varchar not null',
-                'alter table "users" add column "bar" binary(16) not null'
+                'alter table "users" add column "bar" blob(16) not null'
             ],
             $blueprint->toSql($connection, new SQLiteGrammar)
         );

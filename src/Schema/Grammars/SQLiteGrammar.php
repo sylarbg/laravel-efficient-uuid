@@ -16,6 +16,6 @@ class SQLiteGrammar extends BaseSQLiteGrammar
      */
     protected function typeEfficientUuid(Fluent $column)
     {
-        return sprintf('binary(%d)', $column->length ?? 16);
+        return sprintf('blob(%d)', $column->length ?? 16);
     }
 }
